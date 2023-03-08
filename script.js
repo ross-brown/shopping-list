@@ -125,7 +125,7 @@ function setItemToEdit(item) {
 }
 
 function removeItem(item) {
-  if (confirm("Are you sure?")) {
+  if (confirm(`Are you sure you want to remove ${item.textContent}?`)) {
     // Remove item from DOM
     item.remove();
 
@@ -147,7 +147,7 @@ function removeItemFromStorage(item) {
 }
 
 function clearItems() {
-  if (confirm('Are you sure you want to clear your list?')) {
+  if (confirm("Are you sure you want to clear your list?")) {
     while (itemList.firstChild) {
       itemList.removeChild(itemList.firstChild);
     }
