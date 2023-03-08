@@ -147,14 +147,16 @@ function removeItemFromStorage(item) {
 }
 
 function clearItems() {
-  while (itemList.firstChild) {
-    itemList.removeChild(itemList.firstChild);
+  if (confirm('Are you sure you want to clear your list?')) {
+    while (itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild);
+    }
+
+    // Clear from localStorage
+    localStorage.removeItem("items");
+
+    checkUI();
   }
-
-  // Clear from localStorage
-  localStorage.removeItem("items");
-
-  checkUI();
 }
 
 function filterItems(e) {
