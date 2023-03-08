@@ -107,8 +107,8 @@ function onClickItem(e) {
 
 function checkIfItemExists(item) {
   const itemsFromStorage = getItemsFromStorage();
-  const lowerCaseStorage = itemsFromStorage.map(i => i.toLowerCase());
-  return lowerCaseStorage.includes(item.toLowerCase())
+  const lowerCaseStorage = itemsFromStorage.map((i) => i.toLowerCase());
+  return lowerCaseStorage.includes(item.toLowerCase());
 }
 
 function setItemToEdit(item) {
