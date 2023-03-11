@@ -4,6 +4,7 @@ const itemList = document.getElementById("item-list"); // ul
 const clearBtn = document.getElementById("clear");
 const itemFilter = document.getElementById("filter");
 const formBtn = itemForm.querySelector("button");
+const headerImg = document.querySelector('img');
 let isEditMode = false;
 
 function displayItems() {
@@ -174,6 +175,14 @@ function filterItems(e) {
   });
 }
 
+// function changeTitle(e) {
+//   if (document.querySelector('h1').textContent === 'Shopping List') {
+//     document.querySelector('h1').textContent = 'I love Michelle <3';
+//   } else {
+//     document.querySelector('h1').textContent = 'Shopping List';
+//   }
+// }
+
 function checkUI() {
   itemInput.value = "";
 
@@ -200,6 +209,7 @@ function init() {
   clearBtn.addEventListener("click", clearItems);
   itemFilter.addEventListener("input", filterItems);
   document.addEventListener("DOMContentLoaded", displayItems);
+  // headerImg.addEventListener('click', changeTitle);
 
   checkUI();
 }
